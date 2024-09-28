@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(imagens/bg.png);
+}
+#logo{
+    text-align: center;
+    
+}
+#navegacao{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+h2{
+    text-align: center; 
+    color: #ffae00;
+}
+
+article{
+    display: flex;
+    background-color: #1e1f22;
+    margin: 30px;
+    height: 300px;
+    width: 800px;
+    color: white;
+    margin-left: 250px ;
+
+}
+img{
+    width: 400px;
+}
+.texto{
+    font-size: 15px;
+    font-family: sans-serif;
+    padding: 50px;
+}
+.Pedir{
+    color: white;
+    background-color: #ffae00;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+   
+}
+
+footer{
+    background-color: #1e1f22;
+    color: white;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+}
+
