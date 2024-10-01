@@ -24,6 +24,7 @@
             <section>
                         <h1 style="text-align: center;color: white;  font-size: 30px;">CARDÁPIO DIGITAL</h1>
                         <h2 id="burguer">HAMBURGUERES</h2>
+            <div id="menu">         
                 <article>
                     <div id="fotosdecomida">
                         <img src="imagens/burger01.png">
@@ -95,10 +96,30 @@
                         <a class="Pedir" href="#">Pedir</a>
                     </div>
                 </article>
+            </div>
                 
             </section>
 
         </main>
+
+        <div id="Cart">
+            <div id="cart">
+                <h2 style="text-align: center; color: rgb(0, 0, 0); font-weight: bold; margin-bottom: 2px;">
+                    Meu carrinho
+                </h2>
+                <div id="cart-items" style="display: flex; justify-content: space-between; flex-direction: column; padding: 5px;"></div>
+
+                <p style="font-weight: bolder;">
+                    Total: 
+                    <span id="cart-total">0.00</span>
+                </p>
+            </div>
+        </div>
+        
+            <button id="cart-btn">
+               (<span id="cart-count">0</span>)
+                veja meu carrinho
+            </button>
 
         <footer>
             <p>&copy Ifood</p>
