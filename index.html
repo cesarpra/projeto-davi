@@ -32,7 +32,11 @@
                     <div class="texto">
                         <h3>Clássico Angus Burger - 22,50</h3>
                         <p> <strong>Descrição:</strong> <br>Delicie-se com o nosso Hambúrguer Clássico, feito com um suculento hambúrguer de carne angus, queijo derretido, alface crocante, tomate fresco e um toque especial do nosso molho secreto. Perfeito para saciar sua fome!</p>
-                            <a class="Pedir" href="#">Pedir</a>
+                            <button 
+                              class="Pedir" 
+                              data-name="Clássico Angus Burger"
+                              data-price="22,50"
+                            >Pedir</button>
 
                     </div>
                 </article>
@@ -44,7 +48,11 @@
                     <div class="texto">
                         <h3>Gourmet Burge - R$35,00</h3>
                         <p> <strong>Descrição: </strong> <br> O nosso Hambúrguer Gourmet, preparado com um suculento hambúrguer de carne nobre, queijo derretido, cebola caramelizada e baccon. Uma escolha irresistível!</p>
-                          <a class="Pedir" href="#">Pedir</a>
+                        <button 
+                          class="Pedir" 
+                          data-name="Gourmet Burge"
+                          data-price="35,00"
+                      >Pedir</button>
                 </div>
                 </article>
 
@@ -55,7 +63,11 @@
                     <div class="texto">
                         <h3>Defumado BBQ Burger - R$29,00</h3>
                         <p> <strong>Descrição: </strong>  <br>Deixe-se envolver pelo sabor defumado do nosso Hambúrguer BBQ, uma deliciosa combinação de hambúrguer de carne suculenta, queijo cheddar derretido, cebola caramelizada e salada verde.</p>
-                        <a class="Pedir" href="#">Pedir</a>
+                        <button 
+                             class="Pedir" 
+                             data-name="Defumado BBQ Burger"
+                             data-price="29,00"
+                        >Pedir</button>
                     </div>
                 </article>
 
@@ -68,7 +80,11 @@
                     <div class="texto">
                         <h3>Batatas Fritas - R$15,00</h3>
                         <p> <strong>Descrição: </strong>  <br>Nossas batatas fritas são o acompanhamento perfeito para qualquer refeição! Cortadas em palitos e fritas até ficarem douradas e crocantes por fora, e macias por dentro, elas são irresistíveis em cada mordida.</p>
-                        <a class="Pedir" href="#">Pedir</a>
+                        <button 
+                            class="Pedir" 
+                            data-name="Batatas Fritas"
+                            data-price="15,00"
+                        >Pedir</button>
                 </div>
                 </article>
 
@@ -80,7 +96,11 @@
                     <div class="texto">
                         <h3>Coca-Cola - R$5,00</h3>
                         <p> <strong>Descrição: </strong> <br> Refresque-se com a clássica Coca-Cola gelada, uma bebida que encanta paladares há décadas. Com seu sabor único e inconfundível para acompanhar seu hambúrguer ou batatas fritas.</p>
-                        <a class="Pedir" href="#">Pedir</a>
+                        <button 
+                            class="Pedir" 
+                            data-name="Coca-Cola"
+                            data-price="5,00"
+                        >Pedir</button>
                     </div>
                 </article>
 
@@ -93,7 +113,11 @@
                         <h3>Sprite - R$5,00</h3>
                         <p><strong>Descrição: </strong> <br>
                             Revitalize seus sentidos com a refrescante Sprite, uma bebida cítrica e efervescente que desperta os sentidos e eleva o seu ânimo para acompanhar seu hambúrguer ou batatas fritas.</p>
-                        <a class="Pedir" href="#">Pedir</a>
+                        <button 
+                            class="Pedir" 
+                            data-name="Sprite"
+                            data-price="5,00"
+                        >Pedir</button>
                     </div>
                 </article>
             </div>
@@ -107,12 +131,23 @@
                 <h2 style="text-align: center; color: rgb(0, 0, 0); font-weight: bold; margin-bottom: 2px;">
                     Meu carrinho
                 </h2>
-                <div id="cart-items" style="display: flex; justify-content: space-between; flex-direction: column; padding: 5px;"></div>
+                <div id="cart-items" style="display: flex; justify-content: space-between; flex-direction: column; padding: 2px 5px;"></div>
 
                 <p style="font-weight: bolder;">
                     Total: 
                     <span id="cart-total">0.00</span>
                 </p>
+                <p style="font-weight: bolder; padding: 1px;">Endereço de entrega:</p>
+                <input 
+                   type="text"
+                   placeholder="Digite seu endereço..."
+                   id="address"
+                   >
+                
+                   <div id="botoes">
+                    <button id="close-btn">Fechar</button>
+                    <button id="finalizar-btn">Finalizar pedido</button>
+                   </div>
             </div>
         </div>
         
