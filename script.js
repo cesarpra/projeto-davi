@@ -12,6 +12,7 @@ let cart = []
 
 // Abre o carrinho
 cartBtn.addEventListener('click', function() {
+    atualizarCart()
     cartModal.style.display = 'flex'
 })
 
@@ -42,14 +43,76 @@ function addCart(nome, preço) {
 
     const itenExt = cart.find(item => item.nome === nome)
 
-    if(itenExt){
+    if (itenExt){
         itenExt.quantidade += 1
         return
-    }
-    cart.push({
+    } else{
+      cart.push({
         nome,
         preço,
         quantidade: 1
-    })
+      })
+    }
+    atualizarCart()
 }
+
+// Atualizar carrinho
+
+function atualizarCart() {
+    cartItems.innerHTML = ''
+    let total = 0
+
+    cart.forEach(item => {
+        const criarItem = document.createElement('div')
+        criarItem.classList.add('estilo-cart')
+
+        criarItem.innerHTML = `
+        <div>
+          <div>
+            <p>${item.nome}</p>
+            <p>(${item.quantidade})</p>
+            <p>R$ ${item.preço.toFixed(2)}</p>
+          </div>
+          <div>
+            <button class="remove-btn" data-name="${item.nome}">Remover</button>
+          </div>
+        </div>`
+
+        total += item.preço * item.quantidade
+
+        cartItems.appendChild(criarItem)
+    })
+
+    cartTotal.textContent = total.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    })
+
+    cartCounter.innerHTML = cart.length
+}
+
+cartItems.addEventListener('click', function (evt) {
+    if(evt.target.classList.contains('remove-btn')){
+        const nome = evt.target.getAttribute('data-name')
+
+        removeCart(nome)
+    }
+})
+
+function removeCart(nome) {
+    const index = cart.findIndex(item => item.nome === nome)
+
+    if(index !== -1) {
+        const item = cart[index]
+
+        if(item.quantidade > 1) {
+            item.quantidade -= 1
+            atualizarCart()
+            return
+        }
+        cart.splice(index, 1)
+        atualizarCart()
+    }
+}
+
 

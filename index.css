@@ -100,6 +100,25 @@ img{
     transition: 0.5s;
 }
 
+.estilo-cart {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+
+.estilo-cart > div{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.estilo-cart p{
+    margin: 5px;
+    font-size: medium;
+}
+
 #address{
     width: 95%; 
     border-radius: 2px; 
